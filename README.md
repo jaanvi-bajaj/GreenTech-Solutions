@@ -1,10 +1,8 @@
-# GreenTech Solutions - Company Profile Website
+GreenTech Solutions - Company Profile Website
 
 A full-stack renewable energy company profile website built with traditional HTML, CSS, and JavaScript, powered by Node.js/Express backend and PostgreSQL database.
 
----
-
-## 📋 Table of Contents
+📋 Table of Contents
 
 1. [Project Overview](#project-overview)
 2. [Features](#features)
@@ -19,97 +17,82 @@ A full-stack renewable energy company profile website built with traditional HTM
 11. [Assignment Requirements](#assignment-requirements)
 
 ---
-
-## 🌟 Project Overview
+🌟 Project Overview
 
 GreenTech Solutions is a comprehensive company profile website showcasing renewable energy products and services. The website features:
+6 interlinked pages with emoticon navigation (🏠🛒🏆👥📅📞)
+15 renewable energy products with AED pricing and installation details
+8 awards** with emoticon decorations
+4 team member profiles**
+Company timeline** with milestones
+Interactive contact form** with database integration
+Dubai headquarters** contact information
 
-- **6 interlinked pages** with emoticon navigation (🏠🛒🏆👥📅📞)
-- **15 renewable energy products** with AED pricing and installation details
-- **8 awards** with emoticon decorations
-- **4 team member profiles**
-- **Company timeline** with milestones
-- **Interactive contact form** with database integration
-- **Dubai headquarters** contact information
+✨ Features
+ Frontend Features
+ ✅ Separate HTML files (6 pages)
+ ✅ External CSS stylesheet
+ ✅ External JavaScript file
+ ✅ Responsive design
+ ✅ Emoticon-based navigation
+ ✅ Product filtering by category
+ ✅ Form validation
+ ✅ Dynamic content loading via API
+ Backend Features
+ ✅ Node.js Express server
+ ✅ RESTful API endpoints
+ ✅ PostgreSQL database integration
+ ✅ Real-time data persistence
+ ✅ Image serving
+ ✅ CORS enabled
 
+Database Features
+✅ 6 PostgreSQL tables
+✅ Complete schema with relationships
+✅ Sample data included
+✅ Contact form submissions storage
+✅ Transaction support
 ---
-
-## ✨ Features
-
-### Frontend Features
-- ✅ Separate HTML files (6 pages)
-- ✅ External CSS stylesheet
-- ✅ External JavaScript file
-- ✅ Responsive design
-- ✅ Emoticon-based navigation
-- ✅ Product filtering by category
-- ✅ Form validation
-- ✅ Dynamic content loading via API
-
-### Backend Features
-- ✅ Node.js Express server
-- ✅ RESTful API endpoints
-- ✅ PostgreSQL database integration
-- ✅ Real-time data persistence
-- ✅ Image serving
-- ✅ CORS enabled
-
-### Database Features
-- ✅ 6 PostgreSQL tables
-- ✅ Complete schema with relationships
-- ✅ Sample data included
-- ✅ Contact form submissions storage
-- ✅ Transaction support
-
----
-
-## 🛠️ Technologies Used
-
-### Frontend
+ 🛠️ Technologies Used
+Frontend
 - HTML5
 - CSS3
 - Vanilla JavaScript
 - Responsive Design
-
-### Backend
+Backend
 - Node.js (v18+)
 - Express.js (v4.18+)
 - PostgreSQL (v14+)
-
-### Dependencies
+Dependencies
 - `express` - Web server framework
 - `pg` - PostgreSQL client for Node.js
-
----
-
-## 📦 Prerequisites
-
+  
+ 📦 Prerequisites
 Before you begin, ensure you have the following installed on your Mac:
-
-### 1. Node.js (v18 or higher)
+1. Node.js (v18 or higher)
 
 **Check if installed:**
 ```bash
 node --version
 ```
 
-**If not installed, download from:**
-- Official website: https://nodejs.org/
-- Or install via Homebrew:
+If not installed, download from:
+Official website: https://nodejs.org/
+Or install via Homebrew:
 ```bash
 brew install node
 ```
 
-### 2. PostgreSQL (v14 or higher)
+2. PostgreSQL (v14 or higher)
 
-**Check if installed:**
+Check if installed:
 ```bash
 psql --version
 ```
 
-**If not installed, choose one method:**
+If not installed, choose one method:
 
-#### Method A: Homebrew (Recommended)
+Method A: Homebrew (Recommended)
 ```bash
 # Install Homebrew if you don't have it
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -122,15 +105,15 @@ echo 'export PATH="/opt/homebrew/opt/postgresql@14/bin:$PATH"' >> ~/.zshrc
 source ~/.zshrc
 ```
 
-#### Method B: Postgres.app (GUI Version)
+Method B: Postgres.app (GUI Version)
 1. Download from: https://postgresapp.com/
 2. Install and open the app
 3. Click "Initialize" to create a new server
 4. PostgreSQL is now running!
 
-### 3. Git (for version control)
+3. Git (for version control)
 
-**Check if installed:**
+Check if installed:
 ```bash
 git --version
 ```
@@ -139,14 +122,12 @@ Git usually comes pre-installed on Mac. If not:
 ```bash
 brew install git
 ```
-
 ---
+📥 Installation Guide
 
-## 📥 Installation Guide
+Step 1: Download or Clone the Project
 
-### Step 1: Download or Clone the Project
-
-#### Option A: Download ZIP
+Option A: Download ZIP
 1. Download the project ZIP file
 2. Extract it to your desired location (e.g., Desktop)
 3. Open Terminal and navigate to the folder:
@@ -154,14 +135,14 @@ brew install git
 cd ~/Desktop/GreenTech-Solutions
 ```
 
-#### Option B: Clone from GitHub
+Option B: Clone from GitHub
 ```bash
 cd ~/Desktop
 git clone https://github.com/YOUR-USERNAME/GreenTech-Solutions.git
 cd GreenTech-Solutions
 ```
 
-### Step 2: Install Node.js Dependencies
+Step 2: Install Node.js Dependencies
 
 ```bash
 npm install
@@ -171,18 +152,16 @@ This will install:
 - `express` - Web server
 - `pg` - PostgreSQL client
 
-**Expected output:**
+Expected output:
 ```
 added 60 packages in 3s
 ```
 
----
+🗄️ Database Setup
 
-## 🗄️ Database Setup
+ Step 1: Start PostgreSQL Service
 
-### Step 1: Start PostgreSQL Service
-
-#### If using Homebrew:
+If using Homebrew:
 ```bash
 # Start PostgreSQL
 brew services start postgresql@14
@@ -193,28 +172,28 @@ brew services list | grep postgresql
 
 You should see: `postgresql@14 started`
 
-#### If using Postgres.app:
+If using Postgres.app:
 - Simply open the Postgres.app
 - Ensure the server is running (green light)
 
-### Step 2: Create the Database
+Step 2: Create the Database
 
 ```bash
 # Create a new database named 'greentech'
 createdb greentech
 ```
 
-**Expected output:**
+Expected output:
 - No output means success!
 
-**To verify:**
+To verify:
 ```bash
 psql -l | grep greentech
 ```
 
 You should see `greentech` in the list.
 
-### Step 3: Initialize Database Schema and Data
+Step 3: Initialize Database Schema and Data
 
 ```bash
 # Make sure you're in the project directory
@@ -224,7 +203,7 @@ cd ~/Desktop/GreenTech-Solutions
 psql greentech < db/init.sql
 ```
 
-**Expected output:**
+Expected output:
 ```
 CREATE TABLE
 CREATE TABLE
@@ -239,14 +218,14 @@ INSERT 0 1
 
 This creates 6 tables and inserts all sample data.
 
-### Step 4: Verify Database Setup
+Step 4: Verify Database Setup
 
 ```bash
 # Connect to the database
 psql greentech
 ```
 
-**Run these commands to verify:**
+Run these commands to verify:
 
 ```sql
 -- List all tables (should show 6 tables)
@@ -268,7 +247,7 @@ SELECT name, price, category FROM products LIMIT 5;
 \q
 ```
 
-**Expected tables:**
+Expected tables:
 - `products`
 - `team_members`
 - `timeline_events`
@@ -276,28 +255,26 @@ SELECT name, price, category FROM products LIMIT 5;
 - `testimonials`
 - `contact_submissions`
 
----
+🚀 Running the Application
 
-## 🚀 Running the Application
-
-### Method 1: Using npm (if you updated package.json)
+Method 1: Using npm (if you updated package.json)
 
 ```bash
 npm run dev
 ```
 
-### Method 2: Direct Node.js execution
+Method 2: Direct Node.js execution
 
 ```bash
 node server.js
 ```
 
-**Expected output:**
+Expected output:
 ```
 Server running on http://localhost:5000
 ```
 
-**If you see an error about database connection:**
+If you see an error about database connection:**
 ```bash
 # Set the database URL environment variable
 export DATABASE_URL=postgresql://localhost/greentech
@@ -306,18 +283,17 @@ export DATABASE_URL=postgresql://localhost/greentech
 node server.js
 ```
 
-### Access the Website
+Access the Website
 
 Open your web browser and navigate to:
 ```
 http://localhost:5000
 ```
 
-**You should see the GreenTech Solutions homepage!**
+You should see the GreenTech Solutions homepage!
 
----
 
-## 📁 Project Structure
+📁 Project Structure
 
 ```
 GreenTech-Solutions/
@@ -353,49 +329,47 @@ GreenTech-Solutions/
 └── README.md                  # This file
 ```
 
----
-
-## 🔌 API Endpoints
+🔌 API Endpoints
 
 The server provides RESTful API endpoints for dynamic content:
 
-### Products
+Products
 ```
 GET /api/products
 ```
 Returns all 15 products with details (name, category, price, installation info, etc.)
 
-### Team Members
+Team Members
 ```
 GET /api/team
 ```
 Returns all 4 team member profiles
 
-### Timeline Events
+Timeline Events
 ```
 GET /api/timeline
 ```
 Returns company timeline events ordered by year
 
-### Awards
+Awards
 ```
 GET /api/awards
 ```
 Returns all 8 awards ordered by year (newest first)
 
-### Testimonials
+Testimonials
 ```
 GET /api/testimonials
 ```
 Returns customer testimonials
 
-### Contact Form Submission
+Contact Form Submission
 ```
 POST /api/contact
 ```
 Saves contact form submission to database
 
-**Request body:**
+Request body:
 ```json
 {
   "name": "John Doe",
@@ -406,52 +380,48 @@ Saves contact form submission to database
 }
 ```
 
-### Images
+Images
 ```
 GET /api/images/:filename
 ```
 Serves product and team images
 
----
+🎯 Testing the Application
 
-## 🎯 Testing the Application
-
-### 1. Test Navigation
+1. Test Navigation
 - Click through all 6 pages using the emoticon menu
 - Verify all pages load correctly
 
-### 2. Test Products Page
+2. Test Products Page
 - Should display 15 products
 - Test category filtering (Solar Panels, Wind Energy, etc.)
 - Verify prices are in AED
 
-### 3. Test Awards Page
+3. Test Awards Page
 - Should display 8 awards
 - Verify emoticons appear in award names
 
-### 4. Test Team Page
+4. Test Team Page
 - Should display 4 team members
 - Verify photos load
 
-### 5. Test Contact Form
+ 5. Test Contact Form
 - Fill out all required fields
 - Submit the form
 - Should see success message
 
-### 6. Verify Database Integration
+ 6. Verify Database Integration
 
-**Check contact submission in database:**
+Check contact submission in database:
 ```bash
 psql greentech -c "SELECT * FROM contact_submissions ORDER BY created_at DESC LIMIT 1;"
 ```
 
 You should see your submitted contact form data!
 
----
+ 🔍 Database Verification Tools
 
-## 🔍 Database Verification Tools
-
-### Option 1: Command Line (psql)
+Option 1: Command Line (psql)
 
 ```bash
 # Connect to database
@@ -470,39 +440,37 @@ SELECT name, email, message FROM contact_submissions;
 \q
 ```
 
-### Option 2: Postico 2 (GUI - Recommended)
+Option 2: Postico 2 (GUI - Recommended)
 
-**Download:** https://eggerapps.at/postico2/
+Download: https://eggerapps.at/postico2/
 
-**Setup:**
+Setup:
 1. Open Postico 2
 2. Click "New Favorite"
 3. Enter connection details:
-   - **Host:** localhost
-   - **Port:** 5432
-   - **User:** (your Mac username)
-   - **Database:** greentech
-   - **Password:** (leave blank)
+   - Host: localhost
+   - Port: 5432
+   - User: (your Mac username)
+   - Database: greentech
+   - Password: (leave blank)
 4. Click "Connect"
 
-**Now you can:**
+Now you can:
 - Browse all tables visually
 - View and edit data
 - Run SQL queries
 - Monitor contact form submissions in real-time
+  
+🛠️ Troubleshooting
 
----
+Issue 1: "Cannot connect to database"
 
-## 🛠️ Troubleshooting
-
-### Issue 1: "Cannot connect to database"
-
-**Symptoms:**
+Symptoms:
 ```
 Error: connect ECONNREFUSED 127.0.0.1:5432
 ```
 
-**Solution:**
+Solution:
 ```bash
 # Check if PostgreSQL is running
 brew services list | grep postgresql
@@ -516,9 +484,9 @@ psql postgres -c "SELECT 1;"
 
 ---
 
-### Issue 2: "Database 'greentech' does not exist"
+Issue 2: "Database 'greentech' does not exist"
 
-**Solution:**
+Solution:
 ```bash
 # Create the database
 createdb greentech
@@ -527,17 +495,15 @@ createdb greentech
 psql greentech < db/init.sql
 ```
 
----
+Issue 3: "Port 5000 already in use"
 
-### Issue 3: "Port 5000 already in use"
-
-**Solution A: Use different port**
+Solution A: Use different port
 ```bash
 PORT=3000 node server.js
 ```
 Then access at: `http://localhost:3000`
 
-**Solution B: Kill process using port 5000**
+Solution B: Kill process using port 5000
 ```bash
 # Find process on port 5000
 lsof -ti:5000
@@ -549,22 +515,18 @@ kill -9 $(lsof -ti:5000)
 node server.js
 ```
 
----
+Issue 4: "Module not found: express" or "Module not found: pg"
 
-### Issue 4: "Module not found: express" or "Module not found: pg"
-
-**Solution:**
+Solution:
 ```bash
 # Remove node_modules and reinstall
 rm -rf node_modules package-lock.json
 npm install
 ```
 
----
+Issue 5: "command not found: psql"
 
-### Issue 5: "command not found: psql"
-
-**Solution:**
+Solution:
 ```bash
 # PostgreSQL not in PATH, add it
 echo 'export PATH="/opt/homebrew/opt/postgresql@14/bin:$PATH"' >> ~/.zshrc
@@ -576,9 +538,9 @@ psql --version
 
 ---
 
-### Issue 6: Tables not created or empty
+Issue 6: Tables not created or empty
 
-**Solution:**
+Solution:
 ```bash
 # Drop and recreate database
 psql postgres
@@ -594,24 +556,24 @@ psql greentech < db/init.sql
 
 ---
 
-### Issue 7: Images not loading
+Issue 7: Images not loading
 
-**Check that:**
+Check that:
 1. `attached_assets/generated_images/` folder exists
 2. Images are in the folder
 3. Server is running
 4. Check browser console for errors (F12)
 
-**Fix permissions:**
+Fix permissions:
 ```bash
 chmod -R 755 attached_assets/
 ```
 
 ---
 
-## 📊 Database Schema
+📊 Database Schema
 
-### Products Table
+Products Table
 ```sql
 CREATE TABLE products (
     id SERIAL PRIMARY KEY,
@@ -627,11 +589,11 @@ CREATE TABLE products (
 );
 ```
 
-**Contains:** 15 products with AED pricing
+Contains: 15 products with AED pricing
 
 ---
 
-### Team Members Table
+Team Members Table
 ```sql
 CREATE TABLE team_members (
     id SERIAL PRIMARY KEY,
@@ -642,7 +604,7 @@ CREATE TABLE team_members (
 );
 ```
 
-**Contains:** 4 team member profiles
+Contains: 4 team member profiles
 
 ---
 
@@ -656,11 +618,11 @@ CREATE TABLE timeline_events (
 );
 ```
 
-**Contains:** 8 company milestones
+Contains: 8 company milestones
 
 ---
 
-### Awards Table
+Awards Table
 ```sql
 CREATE TABLE awards (
     id SERIAL PRIMARY KEY,
@@ -671,11 +633,11 @@ CREATE TABLE awards (
 );
 ```
 
-**Contains:** 8 awards with emoticons
+Contains: 8 awards with emoticons
 
 ---
 
-### Testimonials Table
+Testimonials Table
 ```sql
 CREATE TABLE testimonials (
     id SERIAL PRIMARY KEY,
@@ -684,12 +646,11 @@ CREATE TABLE testimonials (
     message TEXT
 );
 ```
-
-**Contains:** 6 customer testimonials
+Contains: 6 customer testimonials
 
 ---
 
-### Contact Submissions Table
+Contact Submissions Table
 ```sql
 CREATE TABLE contact_submissions (
     id SERIAL PRIMARY KEY,
@@ -702,28 +663,23 @@ CREATE TABLE contact_submissions (
 );
 ```
 
-**Stores:** Form submissions with timestamp
+Stores: Form submissions with timestamp
 
 ---
-
-## 🎓 Assignment Requirements Met
-
-This project satisfies all CSIT128 Assignment 2 requirements:
-
-### ✅ HTML Files (10 marks)
+✅ HTML Files 
 - 6 separate HTML pages
 - Semantic HTML structure
 - No inline CSS or JavaScript
 - Proper linking between pages
 
-### ✅ JavaScript Files (10 marks)
+✅ JavaScript Files 
 - External `app.js` file
 - API integration for dynamic content
 - Form validation
 - Event handling
 - No inline JavaScript
 
-### ✅ Form Validation (10 marks)
+ ✅ Form Validation 
 - Contact form with validation
 - Required field checks
 - Email format validation
@@ -731,27 +687,27 @@ This project satisfies all CSIT128 Assignment 2 requirements:
 - Real-time error messages
 - Database integration
 
-### ✅ CSS Files (10 marks)
+ ✅ CSS Files 
 - External `style.css` file
 - Responsive design
 - Professional styling
 - Consistent layout
 - No inline styles
 
-### ✅ Images/Logos (5 marks)
+✅ Images/Logos 
 - 9 professional images
 - Product images (4)
 - Team member photos (4)
 - Hero/banner image (1)
 
-### ✅ UI Design (5 marks)
+✅ UI Design 
 - Clean, modern interface
 - Emoticon-based navigation
 - Responsive layout
 - Professional color scheme
 - User-friendly design
 
-### ✅ Dynamic Content (10 marks)
+✅ Dynamic Content 
 - All data loaded from database
 - Products dynamically rendered
 - Awards dynamically rendered
@@ -759,7 +715,7 @@ This project satisfies all CSIT128 Assignment 2 requirements:
 - Timeline dynamically rendered
 - Testimonials dynamically rendered
 
-### ✅ Database (10 marks)
+✅ Database 
 - PostgreSQL database
 - 6 tables with proper schema
 - Relationships between tables
@@ -767,27 +723,22 @@ This project satisfies all CSIT128 Assignment 2 requirements:
 - Contact form saves to database
 - `db/init.sql` provided
 
-### ✅ Node.js Files (10 marks)
+✅ Node.js Files 
 - `server.js` with Express
 - RESTful API endpoints
 - Database connection handling
 - Error handling
 - Professional code structure
 
-**Total: 80/80 marks - All requirements met! 🎉**
+🌐 Company Information
+Dubai Headquarters
+- Company Name: GreenTech Solutions
+- Phone:+971 4 123 4567
+- Email:info@greentech.ae
+- Address:Dubai Silicon Oasis, Dubai, UAE
+- Business Hours: Sunday - Thursday: 9:00 AM - 6:00 PM
 
----
-
-## 🌐 Company Information
-
-### Dubai Headquarters
-- **Company Name:** GreenTech Solutions
-- **Phone:** +971 4 123 4567
-- **Email:** info@greentech.ae
-- **Address:** Dubai Silicon Oasis, Dubai, UAE
-- **Business Hours:** Sunday - Thursday: 9:00 AM - 6:00 PM
-
-### Specialization
+Specialization
 Renewable energy solutions including:
 - Solar panels and systems
 - Wind turbines
@@ -797,47 +748,16 @@ Renewable energy solutions including:
 
 ---
 
-## 🎬 Demo Instructions for Teachers
+📝 Development Notes
 
-### Quick Demo Script (5 minutes)
+Code Structure
+- Separation of Concerns:** HTML (structure), CSS (presentation), JS (behavior)
+- RESTful API:Following REST principles for all endpoints
+- ES6 Modules:Using modern JavaScript import/export
+- Async/Await:For database operations
+- Error Handling: Try/catch blocks for all database queries
 
-**1. Show File Structure (1 minute)**
-```bash
-ls -R public/
-```
-Point out: "All HTML, CSS, and JS are in separate files!"
-
-**2. Start Server (30 seconds)**
-```bash
-node server.js
-```
-
-**3. Navigate Website (2 minutes)**
-- Open http://localhost:5000
-- Click through all 6 pages
-- Show emoticon navigation
-- Show products filtering
-- Show awards with emoticons
-
-**4. Database Integration Demo (1.5 minutes)**
-- Open Postico 2
-- Show `contact_submissions` table (empty)
-- Submit contact form on website
-- Refresh Postico → new entry appears!
-- "This proves real-time database integration!"
-
----
-
-## 📝 Development Notes
-
-### Code Structure
-- **Separation of Concerns:** HTML (structure), CSS (presentation), JS (behavior)
-- **RESTful API:** Following REST principles for all endpoints
-- **ES6 Modules:** Using modern JavaScript import/export
-- **Async/Await:** For database operations
-- **Error Handling:** Try/catch blocks for all database queries
-
-### Best Practices Followed
+Best Practices Followed
 - ✅ Semantic HTML5
 - ✅ External CSS and JavaScript
 - ✅ Responsive design principles
@@ -848,24 +768,8 @@ node server.js
 - ✅ Proper error handling
 
 ---
-
-## 📄 License
-
-This project is created for educational purposes as part of CSIT128 Assignment 2.
-
----
-
-## 👤 Author
-
-**Student Information:**
-- Course: CSIT128
-- Assignment: Assignment 2 - Company Profile Website
 - Topic: GreenTech Solutions (Renewable Energy)
 
----
+GreenTech Solutions website is ready to run. Follow the installation and setup instructions above, and you'll have a fully functional renewable energy company website with database integration!
 
-## 🎉 You're All Set!
 
-Your GreenTech Solutions website is ready to run. Follow the installation and setup instructions above, and you'll have a fully functional renewable energy company website with database integration!
-
-**Good luck with your assignment! 🚀**
